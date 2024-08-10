@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Starting Build stage'
+                echo 'Building...'
+                sh "ls -la" // выполняем одну команду
+                echo 'Build stage completed'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Starting Test stage'
+                echo 'Testing...'
+                // выполняем несколько команд
+                sh '''
+                ls -la
+                pwd
+                whoami
+                '''
+                echo 'Test stage completed'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Starting Deploy stage'
+                echo 'Deploying...'
+                echo 'Deploy stage completed'
+            }
+        }
+    }
+}
