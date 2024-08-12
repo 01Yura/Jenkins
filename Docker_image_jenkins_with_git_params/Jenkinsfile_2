@@ -13,7 +13,7 @@ pipeline {
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'PT_BRANCH', 
-                        useRepository: 'git@github.com:bakavets/web-app.git')
+                        useRepository: 'git@github.com:01Yura/Jenkins.git')
         gitParameter (  branch: '', 
                         branchFilter: '.*', 
                         defaultValue: 'main', 
@@ -24,7 +24,7 @@ pipeline {
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'PT_TAG', 
-                        useRepository: 'git@github.com:bakavets/web-app.git')
+                        useRepository: 'git@github.com:01Yura/Jenkins.git')
         gitParameter (  branch: '', 
                         branchFilter: '.*', 
                         defaultValue: 'main', 
@@ -36,7 +36,7 @@ pipeline {
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'PT_BRANCH_TAG', 
-                        useRepository: 'git@github.com:bakavets/web-app.git')
+                        useRepository: 'git@github.com:01Yura/Jenkins.git')
         gitParameter (  branch: '', 
                         branchFilter: '.*', 
                         defaultValue: 'main', 
@@ -47,7 +47,7 @@ pipeline {
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'PT_REVISION', 
-                        useRepository: 'git@github.com:bakavets/web-app.git')
+                        useRepository: 'git@github.com:01Yura/Jenkins.git')
         gitParameter (  branch: '', 
                         branchFilter: '.*', 
                         defaultValue: 'main', 
@@ -58,7 +58,7 @@ pipeline {
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'PT_PULL_REQUEST', 
-                        useRepository: 'git@github.com:bakavets/web-app.git')
+                        useRepository: 'git@github.com:01Yura/Jenkins.git')
     }
 
     stages {
@@ -93,8 +93,8 @@ pipeline {
                             doGenerateSubmoduleConfigurations: false, 
                             extensions: [],
                             submoduleCfg: [], userRemoteConfigs: 
-                            [[credentialsId: 'github-bakavets-web-app-cred', 
-                            url: 'git@github.com:bakavets/web-app.git']]]
+                            [[credentialsId: 'git', 
+                            url: 'git@github.com:01Yura/Jenkins.git']]]
                             ) 
                         }
                 }
@@ -109,8 +109,8 @@ pipeline {
                             doGenerateSubmoduleConfigurations: false, 
                             extensions: [],
                             submoduleCfg: [], userRemoteConfigs: 
-                            [[credentialsId: 'github-bakavets-web-app-cred',
-                            url: 'git@github.com:bakavets/web-app.git']]]
+                            [[credentialsId: 'git',
+                            url: 'git@github.com:01Yura/Jenkins.git']]]
                             ) 
                         }
                 }
@@ -125,8 +125,8 @@ pipeline {
                             doGenerateSubmoduleConfigurations: false, 
                             extensions: [],
                             submoduleCfg: [], userRemoteConfigs: 
-                            [[credentialsId: 'github-bakavets-web-app-cred',
-                            url: 'git@github.com:bakavets/web-app.git']]]
+                            [[credentialsId: 'git',
+                            url: 'git@github.com:01Yura/Jenkins.git']]]
                             ) 
                         }
                 }
@@ -141,8 +141,8 @@ pipeline {
                             doGenerateSubmoduleConfigurations: false, 
                             extensions: [],
                             submoduleCfg: [], userRemoteConfigs: 
-                            [[credentialsId: 'github-bakavets-web-app-cred',
-                            url: 'git@github.com:bakavets/web-app.git']]]
+                            [[credentialsId: 'git',
+                            url: 'git@github.com:01Yura/Jenkins.git']]]
                             ) 
                         }
                 }
@@ -157,9 +157,9 @@ pipeline {
                             doGenerateSubmoduleConfigurations: false, 
                             extensions: [],
                             submoduleCfg: [], userRemoteConfigs: 
-                            [[credentialsId: 'github-bakavets-web-app-cred', 
+                            [[credentialsId: 'git', 
                             refspec: '+refs/pull/*:refs/remotes/origin/pr/*',
-                            url: 'git@github.com:bakavets/web-app.git']]]
+                            url: 'git@github.com:01Yura/Jenkins.git']]]
                             ) 
                         }
                 }
